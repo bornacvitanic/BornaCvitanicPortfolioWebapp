@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace BornaCvitanicPortfolioWebapp.Data
+namespace BornaCvitanicPortfolioWebapp.DAL
 {
     public class ApplicationDbContext : IdentityDbContext
     {

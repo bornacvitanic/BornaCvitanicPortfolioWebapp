@@ -1,4 +1,4 @@
-using BornaCvitanicPortfolioWebapp.Data;
+using BornaCvitanicPortfolioWebapp.DAL;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
