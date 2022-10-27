@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Migrations;
 using System;
 
-namespace BornaCvitanicPortfolioWebapp.Data.Migrations
+namespace BornaCvitanicPortfolioWebapp.DAL.Migrations
 {
     public partial class CreateIdentitySchema : Migration
     {
