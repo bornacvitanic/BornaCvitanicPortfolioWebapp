@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace BornaCvitanicPortfolioWebapp.Models.Portfolio
+namespace BornaCvitanicPortfolioWebapp.Model.Portfolio
 {
     public class Post
     {
