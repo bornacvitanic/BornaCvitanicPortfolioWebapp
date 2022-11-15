@@ -2,7 +2,25 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="text-center container">
+    <div class="row">
+        <img src="~/files/Unity VFX Creation.png" width="100%">
+    </div>
+   <ul class="row" style="list-style-type: none;">
+        <li class="col-12 p-10 rounded border border-dark">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+        </li>
+        <li class="col-12 p-10 rounded border border-dark">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Post" asp-action="Index">Posts</a>
+        </li>
+        <li class="col-12 p-10 rounded border border-dark">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Contact" asp-action="Index">Contact</a>
+        </li>
+        <li class="col-12 p-10 rounded border border-dark">
+            <a class="nav-link text-dark" asp-area="" asp-controller="About" asp-action="Index">About</a>
+        </li>
+        <li class="col-12 p-10 rounded border border-dark">
+            <a class="nav-link text-dark" asp-area="" asp-controller="GithubAPI" asp-action="Index">Github</a>
+        </li>
+    </ul>
 </div>
