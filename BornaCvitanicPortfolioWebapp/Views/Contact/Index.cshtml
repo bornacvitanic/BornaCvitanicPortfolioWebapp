@@ -1,0 +1,57 @@
+﻿@using BornaCvitanicPortfolioWebapp.Models.Contact
+@model ContactModel
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<div id="contact">
+
+    <div style="width: 100%"><iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Bar%C4%8Dev%20trg,%2010000,%20Zagreb+(My%20Business%20Name)&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.maps.ie/distance-area-calculator.html">distance maps</a></iframe></div>
+
+    <form asp-action="Contact" method="post">
+
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <div class="mb-3">
+                        <label for="FirstName" class="form-label">First Name <span style="color:red">*</span></label>
+                        <input asp-for="FirstName" type="text" class="form-control" id="FirstName" placeholder="Your name.." aria-describedby="emailHelp">
+                        <span asp-validation-for="FirstName" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="mb-3">
+                        <label for="LastName" class="form-label">Last Name <span style="color:red">*</span></label>
+                        <input asp-for="LastName" type="text" class="form-control" id="LastName" placeholder="Your last name.." aria-describedby="emailHelp">
+                        <span asp-validation-for="LastName" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="mb-3">
+                <label for="Email" class="form-label">Email Address <span style="color:red">*</span></label>
+                <input asp-for="Email" type="email" class="form-control" id="Email" placeholder="Your e-mail.." aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label for="Country" class="form-label">Country <span style="color:red">*</span></label>
+                <select asp-for="Country" asp-items="ViewBag.CountryItems" class="form-control"></select>
+                <span asp-validation-for="Country" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+		        <label for="Subject" class="form-label">Message <span style="color:red">*</span></label>
+		        <textarea asp-for="Message" type="text" class="form-control" rows="8" placeholder="Write something.." ></textarea>
+		        <span asp-validation-for="Message" class="text-danger"></span>
+	        </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+
+    </form>
+
+</div>
+
+
