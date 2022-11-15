@@ -2,7 +2,7 @@
 @model Post
 
 <label class="control-label">Images</label> 
-    <form id="postImages" asp-controller="Post" asp-action="UploadImage" asp-route-postId="@Model.Id" enctype="multipart/form-data" class="dropzone">
+    <form id="uploadPhoto" asp-controller="Post" asp-action="UploadImage" asp-route-postId="@Model.Id" enctype="multipart/form-data" class="dropzone">
         <input type="hidden" value="@Model.Id"/>
     </form> 
 

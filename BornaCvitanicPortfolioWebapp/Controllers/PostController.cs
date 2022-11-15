@@ -75,14 +75,10 @@ namespace BornaCvitanicPortfolioWebapp.Controllers
 
         public async Task<IActionResult> UploadImage(int postId, IFormFile file)
         {
-            string path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/files");
-            if (!Directory.Exists(path))
-            {
-                Directory.CreateDirectory(path);
-            }
+            var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/files");
+            if (!Directory.Exists(path)) Directory.CreateDirectory(path);
 
-            var fileName = file.FileName;
-            string fileNameWithPath = Path.Combine(path, fileName);
+            var fileNameWithPath = Path.Combine(path, file.FileName);
 
             bool fileExists = System.IO.File.Exists(fileNameWithPath);
 
@@ -93,14 +89,11 @@ namespace BornaCvitanicPortfolioWebapp.Controllers
 
             var post = this._dbContext.Posts.Where(p => p.Id == postId).First();
 
-            post.ImagePath = fileName;
+            post.ImagePath = file.FileName;
 
             var ok = await this.TryUpdateModelAsync(post);
 
-            if (ok)
-            {
-                this._dbContext.SaveChanges();
-            }
+            if (ok) this._dbContext.SaveChanges();
 
             return RedirectToAction("Index");
         }
